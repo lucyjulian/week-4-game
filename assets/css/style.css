@@ -58,7 +58,7 @@ h1 {
     color: rgb(252, 171, 22);
 
 }
-.totalScore {
+#totalScore {
     text-align: center;
     font-size: 60px;
 }

@@ -6,6 +6,7 @@
   <title>Crystals Collector</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
@@ -18,11 +19,15 @@
         <p>Each time the game starts, it will change the values of the crystals.</p>
     </div>
     <div class="randomNumberBox">
-        <p class="randomNumber"></p>
+        <p id="randomNumber"></p>
     </div>
     <div class="winLoseBox">
-        <p class="wins">Wins: </p>
-        <p class="losses">Losses: </p>
+        <p>Wins: 
+            <div id="wins"></div>
+        </p>
+        <p>Losses: 
+            <div id="losses"></div>
+        </p>
     </div>
     <div class="crystalRow">
         <img id="crystal1" src="assets/images/rainbowcrystal.jpg">
@@ -32,7 +37,7 @@
     </div>
     <div class="yourscore">
         <p>Your total score is:</p>
-        <div class="totalScore"></div>
+        <div id="totalScore"></div>
     </div>
     
     <script src="assets/javascript/game.js"></script>
