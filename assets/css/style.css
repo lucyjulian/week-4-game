@@ -23,23 +23,27 @@ h1 {
     text-align: center;
     color: green;
 }
-.randomNumber {
+#randomNumber {
     padding: 20px;
 }
 .winLoseBox {
-    height: 100px;
-    width: 300px;
+    padding: 10px;
+    height: 80px;
+    width: 280px;
     float: right;
     font-size: 24px;
     color: pink;
     background-color: green;
     margin: 10px;
+    
 }
-.wins{
-    padding: 10px;
+#wins{
+    text-align: center;
+    font-size: 36px;
 }
-.losses{
-    padding: 10px;
+#losses{
+    text-align: center;
+    font-size: 36px;
 }
 .crystalRow {
     border-color: rgb(14, 83, 200);

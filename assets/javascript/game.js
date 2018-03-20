@@ -1,13 +1,15 @@
-var randomNumber 
+var randomNumber = 0
 var crystal1Number
 var crystal2Number
 var crystal3Number
 var crystal4Number
 var wins = 0
 var losses = 0
-var totalScore = 0
-
+var totalScore =0
+var win = false;
+$("#wins").html(wins);
 $("#totalScore").html(totalScore);
+$("#losses").html(losses);
 
 //generate the random number (between 15 and 75)
 function generateRandomNumber(){
@@ -25,36 +27,69 @@ function randomCrystals(){
 }
 randomCrystals();
 
+//winner function
+function winner(){
+    wins++;
+    $("#wins").html(wins);
+    generateRandomNumber();
+    randomCrystals();
+    totalScore = 0;
+    $("#totalScore").html(totalScore);
+}
+
+//loser function
+function loser(){
+    losses++;
+    $("#losses").html(losses);
+    generateRandomNumber();
+    randomCrystals();
+    totalScore = 0;
+    $("#totalScore").html(totalScore);
+}
+
 //compound total score when a crystal is clicked
+
 $("#crystal1").on("click", function(){
     totalScore = totalScore + crystal1Number;
     $("#totalScore").html(totalScore);
+    console.log(totalScore);
+    if (totalScore === randomNumber){
+        winner();
+    }
+    if (totalScore > randomNumber){
+        loser();
+    }
 })
 $("#crystal2").on("click", function(){
     totalScore = totalScore + crystal2Number;
     $("#totalScore").html(totalScore);
+    console.log(totalScore);
+    if (totalScore === randomNumber){
+        winner();
+    }
+    if (totalScore > randomNumber){
+        loser();
+    }
 })
 $("#crystal3").on("click", function(){
     totalScore = totalScore + crystal3Number;
     $("#totalScore").html(totalScore);
+    console.log(totalScore);
+    if (totalScore === randomNumber){
+        winner();
+    }
+    if (totalScore > randomNumber){
+        loser();
+    }
 })
 $("#crystal4").on("click", function(){
     totalScore = totalScore + crystal4Number;
     $("#totalScore").html(totalScore);
+    console.log(totalScore);
+    if (totalScore === randomNumber){
+        winner();
+    }
+    if (totalScore > randomNumber){
+        loser();
+    }
 })
-
-//if the total score = random number, increment wins by 1
-// function checkForWin(){
-//     if (totalScore === randomNumber){
-//     wins++;
-//     $("#wins").html(wins);
-//     generateRandomNumber();
-//     randomCrystals();
-//     totalScore = 0;
-// }
-
-
-//if total score > random number, increment losses, 
-//generate new random number, and reset total score count,
-//give crystals new values
-
