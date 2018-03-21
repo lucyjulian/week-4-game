@@ -11,19 +11,19 @@ $("#wins").html(wins);
 $("#totalScore").html(totalScore);
 $("#losses").html(losses);
 
-//generate the random number (between 15 and 75)
+//generate the random number (between 19 and 120)
 function generateRandomNumber(){
-    randomNumber = (Math.floor(Math.random() * 60) + 15);
+    randomNumber = (Math.floor(Math.random() * 101) + 19);
     $("#randomNumber").html(randomNumber);
 }
 generateRandomNumber();
 
-//assign random values to each of the 4 crystals (between 1 and 10)
+//assign random values to each of the 4 crystals (between 1 and 12)
 function randomCrystals(){
-    crystal1Number = (Math.floor(Math.random() * 10) + 1);
-    crystal2Number = (Math.floor(Math.random() * 10) + 1);
-    crystal3Number = (Math.floor(Math.random() * 10) + 1);
-    crystal4Number = (Math.floor(Math.random() * 10) + 1);
+    crystal1Number = (Math.floor(Math.random() * 12) + 1);
+    crystal2Number = (Math.floor(Math.random() * 12) + 1);
+    crystal3Number = (Math.floor(Math.random() * 12) + 1);
+    crystal4Number = (Math.floor(Math.random() * 12) + 1);
 }
 randomCrystals();
 

@@ -51,8 +51,9 @@ h1 {
     border-style: solid;
     clear: both;
     background-color: white;
-    width: 820px;
+    /* width: 820px; */
     margin: 10px;
+    align-content: center;
 }
 .yourscore {
     height: 100px;
